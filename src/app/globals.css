@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+
+
+
+/* Core design tokens used by Tailwind v4 utilities */
+@theme {
+  /* Required core color tokens used by utilities like bg-background, text-foreground, border-border, ring */
+  --color-background: #ffffff;
+  --color-foreground: #0b1221;
+  --color-border: #e5e7eb;
+  --color-ring: #3b82f6;
+
+  /* RIVOO User Portal color tokens */
+  --color-user-primary: #198754;
+  --color-user-emergency: #c1121f;
+  --color-user-text: #003049;
+  --color-user-secondary: #718096;
+  --color-user-bg: #f8f9fa;
+  --color-user-warning: #ff9f0a;
+  --color-user-info: #0288d1;
+
+  /* RIVOO Hospital Portal color tokens */
+  --color-hospital-primary: #003049;
+  --color-hospital-accent: #0288d1;
+  --color-hospital-alert: #c1121f;
+  --color-hospital-success: #198754;
+  --color-hospital-bg: #f8f9fa;
+  --color-hospital-text: #003049;
+  --color-hospital-secondary: #64748b;
+
+  /* Font families */
+  --font-sans: 'Roboto', 'sans-serif';
+  --font-heading: 'Lato', 'sans-serif';
+  
+}
+:root {
+  --sea-green: #198754;
+  --fire-brick: #c1121f;
+  --prussian-blue: #003049;
+  --slate-gray: #718096;
+  --seasalt: #f8f9fa;
+  --orange-peel: #ff9f0a;
+  --blue-ncs: #0288d1;
+}
+
+/* Dark-mode overrides (activated by adding class="dark" on <html>) */
+@theme .dark {
+  --color-background: #0b1221;
+  --color-foreground: #e5e7eb;
+  --color-border: #374151;
+  --color-ring: #8b5cf6;
+}
+
+/* Base layer examples that leverage the tokens */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+  @keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+.text-sea-green { color: var(--sea-green); }
+.bg-sea-green { background-color: var(--sea-green); }
+.text-fire-brick { color: var(--fire-brick); }
+.bg-fire-brick { background-color: var(--fire-brick); }
+.text-prussian-blue { color: var(--prussian-blue); }
+.bg-prussian-blue { background-color: var(--prussian-blue); }
+.text-slate-gray { color: var(--slate-gray); }
+.bg-slate-gray { background-color: var(--slate-gray); }
+.bg-seasalt { background-color: var(--seasalt); }
+.text-orange-peel { color: var(--orange-peel); }
+.bg-orange-peel { background-color: var(--orange-peel); }
+.text-blue-ncs { color: var(--blue-ncs); }
+.bg-blue-ncs { background-color: var(--blue-ncs); }
+.font-lato { font-family: 'Lato', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+}
+  
