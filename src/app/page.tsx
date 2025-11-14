@@ -111,42 +111,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Available Routes */}
-        <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-          <h3 className="text-lg font-bold text-user-text mb-4">Available Routes</h3>
-          <div className="grid md:grid-cols-2 gap-4 text-left text-sm">
-            <div>
-              <h4 className="font-semibold text-user-text mb-2">Authentication</h4>
-              <ul className="space-y-1 text-user-secondary">
-                <li><code className="bg-gray-100 px-2 py-1 rounded">/auth/signin</code> - Combined login/signup</li>
-                <li><code className="bg-gray-100 px-2 py-1 rounded">/auth/signup</code> - Redirects to signin</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-user-text mb-2">User Portal</h4>
-              <ul className="space-y-1 text-user-secondary">
-                <li><code className="bg-gray-100 px-2 py-1 rounded">/user/dashboard</code> - Emergency dashboard</li>
-                <li><code className="bg-gray-100 px-2 py-1 rounded">/user/profile</code> - User profile (planned)</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-user-text mb-2">Hospital Portal</h4>
-              <ul className="space-y-1 text-user-secondary">
-                <li><code className="bg-gray-100 px-2 py-1 rounded">/hospital/login</code> - Hospital staff login</li>
-                <li><code className="bg-gray-100 px-2 py-1 rounded">/hospital/dashboard</code> - Incident management</li>
-                <li><code className="bg-gray-100 px-2 py-1 rounded">/hospital/incidents</code> - Incident details (planned)</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-user-text mb-2">API Endpoints</h4>
-              <ul className="space-y-1 text-user-secondary">
-                <li><code className="bg-gray-100 px-2 py-1 rounded">/api/alert/create</code> - Create emergency</li>
-                <li><code className="bg-gray-100 px-2 py-1 rounded">/api/incidents</code> - List incidents</li>
-                <li><code className="bg-gray-100 px-2 py-1 rounded">/api/incidents/[id]</code> - Update incident</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+    
 
         {/* Footer */}
         <div className="mt-8 text-center text-user-secondary">
